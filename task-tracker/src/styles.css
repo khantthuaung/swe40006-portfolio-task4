@@ -1,0 +1,227 @@
+/* Wood palette: walnut text, oak accents and warm cream surfaces. */
+/* One centred column keeps the page simple on both desktop and mobile. */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #3e2c23;
+  background: #f4ede3;
+  line-height: 1.5;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 64px 24px 32px;
+}
+header {
+  margin-bottom: 32px;
+}
+.eyebrow {
+  color: #7b624f;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+h1 {
+  font-size: 42px;
+  letter-spacing: -1.5px;
+  margin: 8px 0;
+  line-height: 1.2;
+}
+h1 span {
+  color: #a27449;
+}
+header > p:last-child {
+  color: #786250;
+  font-size: 15px;
+}
+.panel {
+  background: #fffaf3;
+  border: 1px solid #e1d2c0;
+  border-radius: 12px;
+  padding: 26px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 18px;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+form {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+label {
+  display: block;
+  font-size: 13px;
+}
+.title-field {
+  flex: 1 1 240px;
+}
+.optional {
+  color: #806b58;
+  font-size: 11px;
+}
+input,
+button {
+  font: inherit;
+}
+input:not([type="checkbox"]) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-top: 7px;
+  border: 1px solid #ccb79f;
+  border-radius: 6px;
+  padding: 10px 12px;
+  min-height: 44px;
+  background: #fffaf3;
+  color: inherit;
+  font-size: 16px;
+}
+button {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  min-height: 44px;
+  padding: 9px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover {
+  filter: brightness(0.95);
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #ad783d;
+  outline-offset: 3px;
+}
+.add-button {
+  color: white;
+  background: #795234;
+}
+.list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.list-heading h2 {
+  margin-bottom: 14px;
+}
+.list-heading p {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: #786250;
+}
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.filters button {
+  background: #f3eadf;
+  color: #725a46;
+}
+.filters .selected {
+  background: #ead7bf;
+  color: #795234;
+  border-color: #c6a27a;
+}
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 0;
+  border-top: 1px solid #eadfd1;
+}
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  flex: 1;
+  cursor: pointer;
+}
+.task-label input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: #795234;
+}
+.task-label strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.task-label small {
+  display: block;
+  font-size: 12px;
+  color: #806b58;
+  margin-top: 4px;
+}
+.completed {
+  text-decoration: line-through;
+  color: #887463;
+}
+.delete-button {
+  background: transparent;
+  color: #984b38;
+  border-color: #dfc5b8;
+}
+.empty {
+  text-align: center;
+  padding: 28px 0;
+  color: #806b58;
+  font-size: 14px;
+}
+.message {
+  color: #984b38;
+  font-size: 13px;
+}
+footer {
+  text-align: center;
+  color: #806b58;
+  font-size: 12px;
+  margin-top: 28px;
+}
+/* Stack the form fields on phones and keep buttons easy to tap. */
+@media (max-width: 600px) {
+  main {
+    padding: 32px 16px;
+  }
+  h1 {
+    font-size: 34px;
+  }
+  .panel {
+    padding: 20px 16px;
+  }
+  form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .add-button {
+    width: 100%;
+  }
+  .task-list li {
+    gap: 8px;
+  }
+  .delete-button {
+    padding: 9px 10px;
+  }
+}

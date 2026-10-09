@@ -1,0 +1,9 @@
+student_id,name,mark
+S001,Alex,85
+S002,Blair,abc
+S003,Casey,120
+S004,Drew,-5
+S005,Ellis,
+S006,,60
+S001,Duplicate,70
+S007,Fin,NaN
